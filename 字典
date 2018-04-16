@@ -1,0 +1,48 @@
+using System;
+//引用泛型集合命名空间
+using System.Collections.Generic;
+
+namespace Lesson_24
+{
+    class MainClass
+    {
+        public static void Main (string[] args)
+        {
+            //创建一个字典对象，key的类型是string，Value的类型是int
+            Dictionary<string,int> dic=new Dictionary<string,int>();
+
+            //Add方法用来添加键值对
+            dic.Add("laowang",13);
+            dic.Add("laozhang",18);
+
+            //从字典中移除键值对
+            dic.Remove ("laowang");
+
+            //清空当前字典
+            dic.Clear ();
+
+            //获取当前字典中KeyValue的个数
+            int count = dic.Count;
+            Console.WriteLine ("当前字典中有"+count+"个keyvalue");
+
+            //检查字典中是否包含指定的Key
+            bool b=dic.ContainsKey("xiaoming");
+
+            //检查字典中是否包含指定的Value
+            bool c = dic.ContainsValue (15);
+
+            //尝试获取指定的key所对应的Value
+            int s;
+            dic.TryGetValue ("xiaoming",out s);
+
+            //如果当前字典中包含xiaoming这个key，那么就获取对应的Value并保存在s中bb=true
+            //如果当前字典中不包含xiaoming这个key，那么s=null，bb=false
+
+
+            //通过Key获取Value
+            int age= dic["laowang"];
+            Console.WriteLine (age);
+
+        }
+    }
+}
