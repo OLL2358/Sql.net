@@ -90,9 +90,10 @@ namespace 图书管理系统
             // Convert.ToInt32(SqlHelper.ExecuteScalar("select count(*) from books"))得到数据记录总数
             maxIndex = (int)Math.Ceiling((Convert.ToInt32(SqlHelper.ExecuteScalar("select count(*) from books")) * 1.0 / pageSize));
             // 获取连接字符串
-            string str = System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString;
+            //string str = "server=.;database=library;uid=sa;pwd=123456";
+                //System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString;
             // 得到连接
-            using (SqlConnection conn = new SqlConnection(str))
+            using (SqlConnection conn = new SqlConnection(LoginForm.str))
             {
                 // 判断是否有数据
                 // Convert.ToInt32(SqlHelper.ExecuteScalar("select count(*) from books"))得到数据记录总数

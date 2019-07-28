@@ -53,7 +53,8 @@ namespace 图书管理系统
             {
                 注册用户panel.Visible = false;
                 注销用户panel.Visible = false ;
-                string str = System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString;
+                string str = "server=.;database=library;uid=sa;pwd=123456";
+                    //System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString;
                 string sql;
                 if (_Tag == "user")
                 {

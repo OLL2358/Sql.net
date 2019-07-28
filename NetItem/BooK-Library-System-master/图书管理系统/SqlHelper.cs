@@ -12,7 +12,8 @@ namespace 图书管理系统
         // 获取数据库连接   返回连接对象
         private static SqlConnection GetConn()
         {
-            return new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString);
+            return new SqlConnection(LoginForm.str);
+                //System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString);
         }
 
         // 执行sql操作   返回是否存在用户

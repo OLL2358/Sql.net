@@ -16,8 +16,8 @@ namespace 图书管理系统
         {
             InitializeComponent();
         }
-        
-        
+
+        public static string str = "server=.;database=library;uid=sa;pwd=123456";
         private void button1_Click(object sender, EventArgs e)
         {
              // 获取账号
@@ -31,7 +31,8 @@ namespace 图书管理系统
              }
              else 
              {
-                 string str = System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString;
+                //string str = "server=.;database=library;uid=sa;pwd=123456";
+                    //System.Configuration.ConfigurationManager.ConnectionStrings["library"].ConnectionString;
                  // 构造sql查询语句
                  string sql;
                  if (rBtn1.Checked == true)
@@ -43,9 +44,9 @@ namespace 图书管理系统
                      sql = "select aName from admin where aId='" + Id + "' and aPwd='" + Pwd + "'";
                  }
                  // 构造连接对象
-                 using (SqlConnection conn = new SqlConnection("server=.;database=library"))       
+                 using (SqlConnection conn = new SqlConnection(str))       
                  {
-                     SqlCommand cmd = new SqlCommand(str, conn);
+                     SqlCommand cmd = new SqlCommand(sql, conn);
                      // 打开数据库连接
                      conn.Open();                                          
                      // 执行查询语句,返回结果集第一行第一列
