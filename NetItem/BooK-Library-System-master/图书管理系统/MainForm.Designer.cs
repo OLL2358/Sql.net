@@ -174,7 +174,7 @@
             // 新用户注册
             // 
             this.新用户注册.Name = "新用户注册";
-            this.新用户注册.Size = new System.Drawing.Size(216, 26);
+            this.新用户注册.Size = new System.Drawing.Size(174, 26);
             this.新用户注册.Text = "新用户注册";
             this.新用户注册.Click += new System.EventHandler(this.新用户注册_Click);
             // 
@@ -184,7 +184,7 @@
             this.修改信息,
             this.修改密码});
             this.用户信息修改ToolStripMenuItem.Name = "用户信息修改ToolStripMenuItem";
-            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.用户信息修改ToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.用户信息修改ToolStripMenuItem.Text = "用户信息修改";
             // 
             // 修改信息
@@ -204,13 +204,13 @@
             // 锁定用户
             // 
             this.锁定用户.Name = "锁定用户";
-            this.锁定用户.Size = new System.Drawing.Size(216, 26);
+            this.锁定用户.Size = new System.Drawing.Size(174, 26);
             this.锁定用户.Text = "锁定用户处理";
             // 
             // 注销用户
             // 
             this.注销用户.Name = "注销用户";
-            this.注销用户.Size = new System.Drawing.Size(216, 26);
+            this.注销用户.Size = new System.Drawing.Size(174, 26);
             this.注销用户.Text = "注销用户";
             this.注销用户.Click += new System.EventHandler(this.注销用户_Click);
             // 
@@ -465,7 +465,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "图书管理系统";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
